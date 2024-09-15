@@ -59,5 +59,9 @@ def delete_faq(faq_id):
     faqs = [faq for faq in faqs if faq["id"] != faq_id]
     return jsonify({"message": "FAQ deleted"}), 200
 
+@app.route('/')
+def hello_world():
+    return 'Hello World'
+
 if __name__ == '__main__':
     app.run(debug=True)
